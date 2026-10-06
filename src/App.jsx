@@ -4,7 +4,7 @@ const linkedin = "https://www.linkedin.com/in/utsav-singh-985b64246";
 const github = "https://github.com/utsav220";
 const email = "utsavsingh2201@gmail.com";
 const recruiterEmail = `mailto:${email}?subject=${encodeURIComponent("SDET / QA Automation opportunity")}&body=${encodeURIComponent("Hi Utsav,\n\nI’d like to connect with you about an opportunity. Please let me know a convenient time to talk.\n\nBest,\n")}`;
-const resumeUrl = "/Utsav_Singh.pdf";
+const resumeUrl = `${import.meta.env.BASE_URL}Utsav_Singh.pdf`;
 const nav = ["About", "Expertise", "Projects", "Skills", "Resume", "Contact"];
 const skills = {
   "Test automation": ["API testing", "Backend testing", "Regression", "Functional", "Integration", "End-to-end", "Data-driven testing", "Automation frameworks"],
@@ -56,7 +56,7 @@ function Header() {
 }
 
 function Portrait() {
-  return <div className="portrait-frame"><img src="/utsav-singh-cutout.png" alt="Portrait of Utsav Singh" onError={(e) => { e.currentTarget.style.display = "none"; }} /><div className="portrait-fallback"><span>US</span><small>SOFTWARE QUALITY ENGINEERING</small></div></div>;
+  return <div className="portrait-frame"><img src={`${import.meta.env.BASE_URL}utsav-singh-cutout.png`} alt="Portrait of Utsav Singh" onError={(e) => { e.currentTarget.style.display = "none"; }} /><div className="portrait-fallback"><span>US</span><small>SOFTWARE QUALITY ENGINEERING</small></div></div>;
 }
 
 function App() {
